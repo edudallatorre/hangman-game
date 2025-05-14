@@ -2,16 +2,18 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <title>{% block title %}Hangman Game{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 128 128'%3E%3Ccircle cx='64' cy='64' r='60' fill='%23fff'/%3E%3Cline x1='34' y1='110' x2='94' y2='110' stroke='%23000' stroke-width='8'/%3E%3Cline x1='54' y1='110' x2='54' y2='20' stroke='%23000' stroke-width='8'/%3E%3Cline x1='54' y1='20' x2='94' y2='20' stroke='%23000' stroke-width='8'/%3E%3Cline x1='94' y1='20' x2='94' y2='40' stroke='%23000' stroke-width='8'/%3E%3Ccircle cx='94' cy='50' r='10' fill='%23000'/%3E%3Cline x1='94' y1='60' x2='94' y2='85' stroke='%23000' stroke-width='6'/%3E%3Cline x1='94' y1='65' x2='84' y2='75' stroke='%23000' stroke-width='6'/%3E%3Cline x1='94' y1='65' x2='104' y2='75' stroke='%23000' stroke-width='6'/%3E%3Cline x1='94' y1='85' x2='84' y2='100' stroke='%23000' stroke-width='6'/%3E%3Cline x1='94' y1='85' x2='104' y2='100' stroke='%23000' stroke-width='6'/%3E%3C/svg%3E">
         {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
         {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body>
+    <body class="custom-bg">
         {% block body %}{% endblock %}
     </body>
 </html>
